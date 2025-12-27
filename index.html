@@ -1,62 +1,21 @@
-<!DOCTYPE html>
-<html lang="si">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CINEMAX HD - Movie Requests</title>
-    <link rel="stylesheet" href="style.css">
-    <style>
-        .request-wall { margin-top: 30px; text-align: left; }
-        .wall-container { background: white; border-radius: 10px; overflow: hidden; border: 2px solid #e50914; margin-bottom: 20px;}
-        iframe { width: 100%; height: 400px; border: none; }
-        .group-card { background: #222; padding: 12px; border-radius: 10px; margin-bottom: 8px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;}
-        .join-btn { background: #25D366; color: white; padding: 5px 15px; text-decoration: none; border-radius: 15px; font-size: 12px; font-weight: bold;}
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1 style="color: #e50914;">CINEMAX HD</h1>
-        <h3>Movie Request Center</h3>
-        
-        <form id="movieRequestForm">
-            <div class="form-group">
-                <label>චිත්‍රපටයේ නම:</label>
-                <input type="text" id="movieName" placeholder="උදා: The Avengers" required>
+<section class="admin-section">
+            <h2 class="section-title">🛡️ Management Team</h2>
+            
+            <div class="admin-card owner">
+                <div class="admin-icon">👤</div>
+                <div class="admin-info">
+                    <span class="role">Group Owner</span>
+                    <span class="name">Kavindu Kaushalya</span>
+                </div>
+                <a href="https://wa.me/94760595208" class="wa-btn">🥏 Contact</a>
             </div>
-            <div class="form-group">
-                <label>භාෂාව:</label>
-                <select id="language">
-                    <option>Sinhala</option>
-                    <option>English</option>
-                    <option>Hindi</option>
-                    <option>Tamil</option>
-                    <option>Other</option>
-                </select>
+
+            <div class="admin-card">
+                <div class="admin-icon">👮</div>
+                <div class="admin-info">
+                    <span class="role">Group Admin</span>
+                    <span class="name">Nulanga Sathsidu</span>
+                </div>
+                <a href="https://wa.me/94762986758" class="wa-btn">🥏 Contact</a>
             </div>
-            <button type="submit" class="btn">SEND REQUEST 🎬</button>
-        </form>
-
-        <hr style="border: 0.5px solid #333; margin: 30px 0;">
-
-        <div class="request-wall">
-            <h4 style="color: #e50914; text-align: center; margin-bottom: 10px;">📊 Recent Movie Requests (Live)</h4>
-            <div class="wall-container">
-                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDUqIpKY-_8x7GWnBCOEisd7fBatOyoDz5xNnN8q_xQ6f3ancFqXdoCvu7qq7EC-3A2K2ulmvR1yGx/pubhtml?widget=true&amp;headers=false"></iframe>
-            </div>
-            <p style="font-size: 11px; color: #888; text-align: center;">*රික්වෙස්ට් එක දැමූ පසු පෙනීමට විනාඩි 5ක් පමණ ගත විය හැක. රික්වෙස්ට් මැකීමට Google Sheet එක භාවිතා කරන්න.</p>
-        </div>
-
-        <h4 style="color: #ccc; margin-top: 20px;">🔗 Join Our Communities</h4>
-        <div class="group-card">
-            <span>🎬 Movie Only Community</span>
-            <a href="https://chat.whatsapp.com/JbkNkthbyHVJhBdGGiPnLN" class="join-btn">JOIN</a>
-        </div>
-        <div class="group-card">
-            <span>💬 Discussion Group</span>
-            <a href="YOUR_OTHER_GROUP_LINK" class="join-btn">JOIN</a>
-        </div>
-
-    </div>
-    <script src="script.js"></script>
-</body>
-</html>
+</section>
