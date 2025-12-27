@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMAX HD - Movie Request</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <img src="https://img.icons8.com/color/96/000000/movie-projector.png" alt="Logo">
+        <h1>CINEMAX HD</h1>
+        <h3>Movie Request Center</h3>
+        <p>ඔබට අවශ්‍ය චිත්‍රපටයේ නම, වසර සහ භාෂාව ඇතුළත් කර අප වෙත එවන්න.</p>
+
+        <form id="movieRequestForm">
+            <div class="form-group">
+                <label for="movieName">චිත්‍රපටයේ නම:</label>
+                <input type="text" id="movieName" name="movieName" required>
+            </div>
+            <div class="form-group">
+                <label for="releaseYear">නිකුත් වූ වසර:</label>
+                <input type="number" id="releaseYear" name="releaseYear" min="1900" max="2099">
+            </div>
+            <div class="form-group">
+                <label for="language">භාෂාව:</label>
+                <select id="language" name="language">
+                    <option value="Sinhala">සිංහල</option>
+                    <option value="English">ඉංග්‍රීසි</option>
+                    <option value="Tamil">දෙමළ</option>
+                    <option value="Hindi">හින්දි</option>
+                    <option value="Other">වෙනත්</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="requesterName">ඔබගේ නම / Telegram/WhatsApp Name:</label>
+                <input type="text" id="requesterName" name="requesterName">
+            </div>
+            <button type="submit" class="btn">REQUEST MOVIE 🎬</button>
+        </form>
+
+        <p class="join-us">අපගේ WhatsApp සමූහයට එකතු වන්න:</p>
+        <a href="https://whatsapp.com/channel/0029Vb6oAn2EquiVw3u3Y63q" target="_blank" class="whatsapp-link">Join CINEMAX HD WhatsApp Channel</a>
+    </div>
+
+    <div class="footer">
+        Developed for CINEMAX HD Community
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
