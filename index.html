@@ -1,6 +1,81 @@
-<section class="admin-section">
+<!DOCTYPE html>
+<html lang="si">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CINEMAX HD - Movie Requests</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1 class="logo">CINEMAX <span>HD</span></h1>
+            <p class="subtitle">Official Movie Request Center</p>
+        </header>
+        
+        <section class="form-section">
+            <form id="movieRequestForm">
+                <div class="form-group">
+                    <label>Movie Name / චිත්‍රපටයේ නම:</label>
+                    <input type="text" id="movieName" placeholder="Ex: Avatar: The Way of Water" required>
+                </div>
+                <div class="form-group">
+                    <label>Language / භාෂාව:</label>
+                    <select id="language">
+                        <option>Sinhala (Sub/Dub)</option>
+                        <option>English</option>
+                        <option>Hindi</option>
+                        <option>Tamil</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <button type="submit" class="btn-glow">SEND REQUEST 🎬</button>
+            </form>
+        </section>
+
+        <section class="wall-section">
+            <h2 class="section-title">📊 Recent Requests (Live Wall)</h2>
+            <div class="wall-wrapper">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDUqIpKY-_8x7GWnBCOEisd7fBatOyoDz5xNnN8q_xQ6f3ancFqXdoCvu7qq7EC-3A2K2ulmvR1yGx/pubhtml?widget=true&amp;headers=false"></iframe>
+            </div>
+            <p class="info-text">*නව රික්වෙස්ට් පෙනීමට විනාඩි 5ක් පමණ ගත විය හැක.</p>
+        </section>
+
+        <section class="group-section">
+            <h2 class="section-title">📍 Join Our Categories</h2>
+            <div class="group-card">
+                <div class="group-info">
+                    <span class="category">Movie Only 🎬</span>
+                    <span class="title">Community Link</span>
+                </div>
+                <a href="https://chat.whatsapp.com/JbkNkthbyHVJhBdGGiPnLN?mode=wwt" class="join-btn">JOIN US</a>
+            </div>
+            <div class="group-card">
+                <div class="group-info">
+                    <span class="category">Movie Only 🎬</span>
+                    <span class="title">Group Link</span>
+                </div>
+                <a href="https://chat.whatsapp.com/J3naslGyDDyGtHHQyAVQpW" class="join-btn">JOIN US</a>
+            </div>
+            <div class="group-card">
+                <div class="group-info">
+                    <span class="category">TV-Series Only 📺</span>
+                    <span class="title">TV-Series Community</span>
+                </div>
+                <a href="https://chat.whatsapp.com/IcjVWaOg52IJaX75pAQJr2" class="join-btn">JOIN US</a>
+            </div>
+            <div class="group-card channel-card">
+                <div class="group-info">
+                    <span class="category">Official Channel 📢</span>
+                    <span class="title">Follow Our Updates</span>
+                </div>
+                <a href="https://whatsapp.com/channel/0029Vb6oAn2EquiVw3u3Y63q/184" class="follow-btn">FOLLOW US</a>
+            </div>
+        </section>
+
+        <section class="admin-section">
             <h2 class="section-title">🛡️ Management Team</h2>
-            
             <div class="admin-card owner">
                 <div class="admin-icon">👤</div>
                 <div class="admin-info">
@@ -9,7 +84,6 @@
                 </div>
                 <a href="https://wa.me/94760595208" class="wa-btn">🥏 Contact</a>
             </div>
-
             <div class="admin-card">
                 <div class="admin-icon">👮</div>
                 <div class="admin-info">
@@ -18,4 +92,12 @@
                 </div>
                 <a href="https://wa.me/94762986758" class="wa-btn">🥏 Contact</a>
             </div>
-</section>
+        </section>
+
+        <footer>
+            <p>© 2025 CINEMAX HD. All Rights Reserved.</p>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
