@@ -1,16 +1,44 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const form = document.getElementById('movieRequestForm');
+document.getElementById('movieRequestForm').addEventListener('submit', function(e) {
+    e.preventDefault();
 
-    form.addEventListener('submit', (event) => {
-        event.preventDefault(); 
+    const submitBtn = e.target.querySelector('button');
+    const movie = document.getElementById('movieName').value;
+    const lang = document.getElementById('language').value;
 
-        // ඔබ ලබාදුන් නිවැරදි Google Form ලින්ක් එක මෙතැන ඇත
-        const googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLScjgHlPdMe47VdreY4fjuUJ63kb79--PD2wK16fa2ZY0jWT3g/viewform?usp=sf_link";
+    // බොත්තම Disable කර "Sending..." ලෙස පෙන්වීම (වැඩි වේගයක් දැනෙන්නට)
+    submitBtn.innerText = "SENDING... ⏳";
+    submitBtn.style.opacity = "0.7";
+    submitBtn.disabled = true;
 
-        // Google Form එක අලුත් ටැබ් එකක විවෘත වේ
-        window.open(googleFormLink, '_blank');
+    // ඔබ ලබාගත් Google Form එකේ Entry IDs මෙතැනට දමන්න
+    // (මේකෙන් වෙන්නේ User ට පේන්නේ නැතුව Background එකේ Form එක Submit වෙන එක)
+    const formID = "YOUR_GOOGLE_FORM_ID"; // උදා: 1FAIpQLS...
+    const entryMovie = "entry.XXXXXXX"; // Movie Name එකට අදාළ Entry ID එක
+    const entryLang = "entry.YYYYYYY";  // Language එකට අදාළ Entry ID එක
 
-        alert("ස්තූතියි! කරුණාකර විවෘත වූ Google Form එක පුරවා ඔබේ ඉල්ලීම තහවුරු කරන්න.");
-        form.reset();
+    const formData = new FormData();
+    formData.append(entryMovie, movie);
+    formData.append(entryLang, lang);
+
+    // Background Fetch හරහා දත්ත යැවීම
+    fetch(`https://docs.google.com/forms/d/e/${formID}/formResponse`, {
+        method: 'POST',
+        mode: 'no-cors',
+        body: formData
+    }).then(() => {
+        // සාර්ථකව යැවූ පසු ලැබෙන ප්‍රතිචාරය
+        submitBtn.innerText = "SENT SUCCESSFULLY! ✅";
+        submitBtn.style.background = "#25D366";
+        
+        setTimeout(() => {
+            submitBtn.innerText = "SEND REQUEST 🎬";
+            submitBtn.style.background = "#e50914";
+            submitBtn.style.opacity = "1";
+            submitBtn.disabled = false;
+            document.getElementById('movieRequestForm').reset();
+        }, 3000);
+    }).catch(error => {
+        alert("Error! නැවත උත්සාහ කරන්න.");
+        submitBtn.disabled = false;
     });
 });
