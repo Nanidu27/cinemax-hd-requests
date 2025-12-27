@@ -1,149 +1,71 @@
-/* මූලික සැකසුම් සහ පසුබිම */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: radial-gradient(circle, #1a1a1a 0%, #000000 100%);
-    color: white;
-    margin: 0;
+/* Admin Section Styling */
+.admin-section {
+    margin-top: 30px;
+}
+
+.admin-card {
+    background: linear-gradient(145deg, #1e1e1e, #141414);
+    padding: 15px;
+    border-radius: 15px;
+    margin-bottom: 12px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-}
-
-/* ප්‍රධාන කොටුව (Container) */
-.container {
-    background: rgba(34, 34, 34, 0.9);
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
-    width: 100%;
-    max-width: 450px;
-    text-align: center;
     border: 1px solid #333;
-    /* පිටුව විවෘත වන විට ලැබෙන Animation එක */
-    animation: fadeIn 1.2s ease-out;
+    transition: 0.3s ease;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+.admin-card:hover {
+    border-color: #e50914;
+    transform: translateY(-3px);
 }
 
-h1 {
-    color: #e50914; /* Netflix Red */
-    font-size: 2.5rem;
-    margin-bottom: 5px;
-    text-shadow: 2px 2px 10px rgba(229, 9, 20, 0.3);
+.admin-icon {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    background: #222;
+    padding: 10px;
+    border-radius: 50%;
 }
 
-h3 {
-    font-weight: 300;
-    color: #ccc;
-    margin-bottom: 30px;
-}
-
-/* Input Fields අලංකාර කිරීම */
-.form-group {
-    margin-bottom: 20px;
+.admin-info {
+    flex-grow: 1;
     text-align: left;
 }
 
-label {
+.role {
     display: block;
-    margin-bottom: 8px;
-    font-size: 14px;
-    color: #aaa;
-}
-
-input, select {
-    width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid #444;
-    background: #111;
-    color: white;
-    font-size: 16px;
-    transition: all 0.3s ease;
-    box-sizing: border-box;
-}
-
-input:focus, select:focus {
-    border-color: #e50914;
-    outline: none;
-    box-shadow: 0 0 8px rgba(229, 9, 20, 0.5);
-}
-
-/* Submit බොත්තමේ Animation */
-.btn {
-    width: 100%;
-    padding: 15px;
-    background: #e50914;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 18px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.4s ease;
+    font-size: 0.7rem;
+    color: #e50914;
     text-transform: uppercase;
+    font-weight: bold;
     letter-spacing: 1px;
 }
 
-.btn:hover {
-    background: #ff0a16;
-    transform: scale(1.03); /* පොඩ්ඩක් ලොකු වීම */
-    box-shadow: 0 5px 15px rgba(229, 9, 20, 0.4);
+.name {
+    display: block;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #fff;
 }
 
-.btn:active {
-    transform: scale(0.98);
-}
-
-/* Live Wall (Google Sheet) කොටස */
-.wall-container {
-    background: white;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 3px solid #e50914;
-    margin-top: 15px;
-    transition: transform 0.3s ease;
-}
-
-.wall-container:hover {
-    transform: translateY(-5px); /* මදක් ඉහළට එසවීම */
-}
-
-/* WhatsApp Group Cards */
-.group-card {
-    background: #2a2a2a;
-    padding: 15px;
-    border-radius: 12px;
-    margin-bottom: 10px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-left: 5px solid #25D366; /* WhatsApp Green */
-    transition: background 0.3s;
-}
-
-.group-card:hover {
-    background: #333;
-}
-
-.join-btn {
-    background: #25D366;
-    color: white;
-    padding: 8px 18px;
+.wa-btn {
+    background: transparent;
+    border: 1px solid #25D366;
+    color: #25D366;
+    padding: 6px 12px;
+    border-radius: 8px;
     text-decoration: none;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    box-shadow: 0 4px 10px rgba(37, 211, 102, 0.2);
+    font-size: 0.8rem;
+    font-weight: 600;
     transition: 0.3s;
 }
 
-.join-btn:hover {
-    background: #1ebe57;
-    box-shadow: 0 6px 15px rgba(37, 211, 102, 0.4);
+.wa-btn:hover {
+    background: #25D366;
+    color: #fff;
+}
+
+/* විශේෂයෙන් Owner සඳහා වෙනස් පෙනුමක් */
+.owner {
+    border-left: 4px solid #e50914;
 }
