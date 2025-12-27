@@ -2,15 +2,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const form = document.getElementById('movieRequestForm');
 
     form.addEventListener('submit', (event) => {
-        event.preventDefault(); // පිටුව Refresh වීම නවත්වයි
+        event.preventDefault(); 
 
-        // ඔබේ Google Form ලින්ක් එක මෙතැනට දමන්න
-        const googleFormLink = "https://docs.google.com/spreadsheets/d/1Uc0WQR5fmWloUiQsDKTmSOj_al5VgTskqjIm9Uk4qe0/edit?usp=drivesdk";
+        // ඔබ ලබාදුන් නිවැරදි Google Form ලින්ක් එක මෙතැන ඇත
+        const googleFormLink = "https://docs.google.com/forms/d/e/1FAIpQLScjgHlPdMe47VdreY4fjuUJ63kb79--PD2wK16fa2ZY0jWT3g/viewform?usp=sf_link";
 
-        // නව ටැබ් එකක Google Form එක විවෘත කරයි
+        // Google Form එක අලුත් ටැබ් එකක විවෘත වේ
         window.open(googleFormLink, '_blank');
 
-        alert("ස්තූතියි! කරුණාකර විවෘත වූ Google Form එක පුරවා ඔබගේ ඉල්ලීම තහවුරු කරන්න.");
+        alert("ස්තූතියි! කරුණාකර විවෘත වූ Google Form එක පුරවා ඔබේ ඉල්ලීම තහවුරු කරන්න.");
         form.reset();
     });
 });
