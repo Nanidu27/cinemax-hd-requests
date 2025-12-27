@@ -3,104 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CINEMAX HD - Movie Request & Groups</title>
+    <title>CINEMAX HD - Movie Requests</title>
     <link rel="stylesheet" href="style.css">
     <style>
-        .group-section {
-            margin-top: 30px;
-            padding-top: 20px;
-            border-top: 1px solid #333;
-        }
-        .group-card {
-            background: #222;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 10px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            border: 1px solid #444;
-        }
-        .group-title {
-            color: #e50914;
-            font-weight: bold;
-            margin-bottom: 8px;
-            font-size: 14px;
-        }
-        .join-btn {
-            background-color: #25D366;
-            color: white;
-            padding: 8px 20px;
-            text-decoration: none;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: bold;
-            transition: 0.3s;
-        }
-        .join-btn:hover {
-            background-color: #128C7E;
-            transform: translateY(-2px);
-        }
+        .request-wall { margin-top: 30px; text-align: left; }
+        .wall-container { background: white; border-radius: 10px; overflow: hidden; border: 2px solid #e50914; margin-bottom: 20px;}
+        iframe { width: 100%; height: 400px; border: none; }
+        .group-card { background: #222; padding: 12px; border-radius: 10px; margin-bottom: 8px; border: 1px solid #444; display: flex; justify-content: space-between; align-items: center;}
+        .join-btn { background: #25D366; color: white; padding: 5px 15px; text-decoration: none; border-radius: 15px; font-size: 12px; font-weight: bold;}
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://img.icons8.com/color/96/000000/movie-projector.png" alt="Logo">
-        <h1>CINEMAX HD</h1>
+        <h1 style="color: #e50914;">CINEMAX HD</h1>
         <h3>Movie Request Center</h3>
-        <p>ඔබට අවශ්‍ය චිත්‍රපටයේ තොරතුරු ඇතුළත් කර Request කරන්න.</p>
-
+        
         <form id="movieRequestForm">
             <div class="form-group">
-                <label for="movieName">චිත්‍රපටයේ නම:</label>
-                <input type="text" id="movieName" name="movieName" placeholder="උදා: RoboCop" required>
+                <label>චිත්‍රපටයේ නම:</label>
+                <input type="text" id="movieName" placeholder="උදා: The Avengers" required>
             </div>
             <div class="form-group">
-                <label for="releaseYear">නිකුත් වූ වසර:</label>
-                <input type="number" id="releaseYear" name="releaseYear" placeholder="2024">
-            </div>
-            <div class="form-group">
-                <label for="language">භාෂාව:</label>
-                <select id="language" name="language">
-                    <option value="Sinhala">සිංහල</option>
-                    <option value="English">ඉංග්‍රීසි</option>
-                    <option value="Tamil">දෙමළ</option>
-                    <option value="Hindi">හින්දි</option>
-                    <option value="Other">වෙනත්</option>
+                <label>භාෂාව:</label>
+                <select id="language">
+                    <option>Sinhala</option>
+                    <option>English</option>
+                    <option>Hindi</option>
+                    <option>Tamil</option>
+                    <option>Other</option>
                 </select>
             </div>
             <button type="submit" class="btn">SEND REQUEST 🎬</button>
         </form>
 
-        <div class="group-section">
-            <h4 style="color: #ccc;">📍 අපේ Group වලට Join වෙන්න</h4>
-            
-            <div class="group-card">
-                <span class="group-title">🎬 Movie Only Community</span>
-                <a href="https://chat.whatsapp.com/JbkNkthbyHVJhBdGGiPnLN?mode=wwt" target="_blank" class="join-btn">JOIN NOW</a>
-            </div>
+        <hr style="border: 0.5px solid #333; margin: 30px 0;">
 
-            <div class="group-card">
-                <span class="group-title">🎬 Movie Only Group</span>
-                <a href="https://chat.whatsapp.com/J3naslGyDDyGtHHQyAVQpW" target="_blank" class="join-btn">JOIN NOW</a>
+        <div class="request-wall">
+            <h4 style="color: #e50914; text-align: center; margin-bottom: 10px;">📊 Recent Movie Requests (Live)</h4>
+            <div class="wall-container">
+                <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQDUqIpKY-_8x7GWnBCOEisd7fBatOyoDz5xNnN8q_xQ6f3ancFqXdoCvu7qq7EC-3A2K2ulmvR1yGx/pubhtml?widget=true&amp;headers=false"></iframe>
             </div>
-
-            <div class="group-card">
-                <span class="group-title">📺 TV-Series Only Community</span>
-                <a href="https://chat.whatsapp.com/IcjVWaOg52IJaX75pAQJr2" target="_blank" class="join-btn">JOIN NOW</a>
-            </div>
-
-            <div class="group-card">
-                <span class="group-title">📢 CINEMAX HD Channel</span>
-                <a href="https://whatsapp.com/channel/0029Vb6oAn2EquiVw3u3Y63q/184" target="_blank" class="join-btn" style="background-color: #34B7F1;">FOLLOW US</a>
-            </div>
+            <p style="font-size: 11px; color: #888; text-align: center;">*රික්වෙස්ට් එක දැමූ පසු පෙනීමට විනාඩි 5ක් පමණ ගත විය හැක. රික්වෙස්ට් මැකීමට Google Sheet එක භාවිතා කරන්න.</p>
         </div>
-    </div>
 
-    <div class="footer">
-        © 2025 CINEMAX HD Community | All Rights Reserved
-    </div>
+        <h4 style="color: #ccc; margin-top: 20px;">🔗 Join Our Communities</h4>
+        <div class="group-card">
+            <span>🎬 Movie Only Community</span>
+            <a href="https://chat.whatsapp.com/JbkNkthbyHVJhBdGGiPnLN" class="join-btn">JOIN</a>
+        </div>
+        <div class="group-card">
+            <span>💬 Discussion Group</span>
+            <a href="YOUR_OTHER_GROUP_LINK" class="join-btn">JOIN</a>
+        </div>
 
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
